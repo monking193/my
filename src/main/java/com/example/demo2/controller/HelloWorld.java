@@ -43,6 +43,7 @@ public class HelloWorld {
         return  student;
     }
 
+
     @RequestMapping(value = "/httpGetTest",method = RequestMethod.GET)
     public String httpGetTest() throws  Exception{
         String str = httpAPIService.doGet("http://localhost:8080/getStudentById?id=2");
@@ -55,5 +56,9 @@ public class HelloWorld {
         return  str;
     }
 
+    @RequestMapping(value = "/1httpGetTest",method = RequestMethod.GET)
+    public String httpGetTest1() throws  Exception{
+        return  "hello";
+    }
 
 }

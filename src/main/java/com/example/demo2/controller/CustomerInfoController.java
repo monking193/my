@@ -27,7 +27,7 @@ public class CustomerInfoController {
     public  Customer save(Customer customer){
         Customer customer1 = new Customer();
         customer.setCustomer_name("djd test");
-        customer.setAge(25);
+        customer.setAge(23);
         customer.setBirthDay(new Date());
         return  customerInfoService.save(customer);
     }
