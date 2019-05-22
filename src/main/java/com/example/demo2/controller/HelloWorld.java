@@ -57,6 +57,9 @@ public class HelloWorld {
 
     @RequestMapping(value = "/1httpGetTest",method = RequestMethod.GET)
     public String httpGetTest1() throws  Exception{
+        synchronized (this){
+
+        }
         return  "hello";
     }
 
