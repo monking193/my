@@ -32,6 +32,4 @@ public class CustomerInfoController {
         return  customerInfoService.save(customer);
     }
 
-
-
 }
