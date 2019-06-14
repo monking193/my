@@ -49,7 +49,7 @@ public class HelloWorld {
         JSONObject jsonObj = JSONObject.parseObject(str);
         Student student = JSONObject.toJavaObject(jsonObj,Student.class);
 
-        Map<String,Object> param = new HashMap<String,Object>();
+        Map<String,Object> param = new HashMap<>();
         param.put("id",3);
         String str1 = httpAPIService.doGet("http://localhost:8080/getStudentById",param);
         return  str;
