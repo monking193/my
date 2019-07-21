@@ -25,11 +25,17 @@ public class CustomerInfoController {
 
     @RequestMapping(value = "/saveCustomer")
     public  Customer save(Customer customer){
-        Customer customer1 = new Customer();
         customer.setCustomer_name("djd test");
         customer.setAge(23);
         customer.setBirthDay(new Date());
-        return  customerInfoService.save(customer);
+        return customer;
+        //return  customerInfoService.save(customer);
     }
 
+    @RequestMapping(value = "/testThread")
+    public void test(){
+        for(int i=0;i<10;i++){
+            new Thread(new ThreadTest(customerInfoService)).start();
+        }
+    }
 }

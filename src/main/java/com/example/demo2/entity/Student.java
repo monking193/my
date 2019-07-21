@@ -1,10 +1,17 @@
 package com.example.demo2.entity;
 
+import com.example.demo2.reflectWithAnnotation.StudentAnnooation;
+
 public class Student {
+    @StudentAnnooation(columnName = "主鍵",dictionaryType = "")
     public int id;
+    @StudentAnnooation(columnName = "電話",dictionaryType = "")
     public String tel;
+    @StudentAnnooation(columnName = "姓名",dictionaryType = "nameType")
     public String name;
+    @StudentAnnooation(columnName = "地址",dictionaryType = "address")
     public String address;
+    @StudentAnnooation(columnName = "學號",dictionaryType = "")
     public String sto_no;
 
 
