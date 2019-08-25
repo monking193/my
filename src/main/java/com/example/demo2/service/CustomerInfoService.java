@@ -36,4 +36,9 @@ public class CustomerInfoService {
         customerInfoRepository.updateCustomer(customer_name,age,birthDay,id,version);
     }
 
+    @TrackTime(param = "666")
+    public void test() {
+         System.out.print("888888");
+    }
+
 }

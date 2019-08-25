@@ -38,4 +38,9 @@ public class CustomerInfoController {
             new Thread(new ThreadTest(customerInfoService)).start();
         }
     }
+
+    @RequestMapping("/test")
+    public void test1(){
+        customerInfoService.test();
+    }
 }

@@ -25,13 +25,16 @@ public class AopConfiguration {
         System.out.println("after aop ---------------" + point);
     }
 
+    //@Around("excudeService()")
     @Around("@annotation(trackTime)")
     public Object around(ProceedingJoinPoint joinPoint, TrackTime trackTime) throws Throwable {
         Object result = null;
         long startTime = System.currentTimeMillis();
         result = joinPoint.proceed();
+        System.out.println(" -------------> around aop");
         long timeTaken = System.currentTimeMillis() - startTime;
-        System.out.println(" -------------> Time Taken by " + joinPoint + " with param[" + trackTime.param() + "] is " + timeTaken);
+        joinPoint.proceed();
+        System.out.println(" -------------> around aop1");
         return result;
     }
 }
